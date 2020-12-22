@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.MatchFragment">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/roundedImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="56sp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="30sp"
+        app:cardElevation="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/roundedImageView"
+            android:layout_width="320dp"
+            android:layout_height="320dp"
+            android:background="@color/white"
+            android:scaleType="centerCrop"
+            android:src="@drawable/test" />
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="150sp"
+        android:layout_marginLeft="30sp"
+        android:layout_marginTop="15sp"
+        android:layout_marginRight="30sp"
+        android:background="@drawable/profile_card"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/roundedImageView"
+        app:layout_constraintVertical_bias="0.01" />
+
+    <TextView
+        android:id="@+id/match_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Aisha"
+        android:textColor="@color/textprime"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7sp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/match_name">
+
+
+        <TextView
+            android:id="@+id/match_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_light"
+            android:text="KMM12345"
+            android:textColor="@color/textprime"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/match_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:fontFamily="@font/montserrat_light"
+            android:text="19 yrs"
+            android:textColor="@color/textprime"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/match_height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:fontFamily="@font/montserrat_light"
+            android:text="5.4"
+            android:textColor="@color/textprime"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/match_place"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:fontFamily="@font/montserrat_light"
+            android:text="Mukkam"
+            android:textColor="@color/textprime"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7sp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_light"
+            android:text="Match Score:"
+            android:textColor="@color/textprime"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/match_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5sp"
+            android:fontFamily="@font/montserrat_light"
+            android:text="70%"
+            android:textColor="@color/textprime"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/matslider"
+        android:layout_width="200sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:saveEnabled="true"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+        android:value="70"
+        android:valueFrom="0.0"
+        android:valueTo="100.0"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        app:thumbColor="@color/white"
+        app:trackColorActive="@color/textprime"
+        app:trackColorInactive="@color/white"
+        app:trackHeight="5sp" />
+
+    <Button
+        android:id="@+id/match_btn_short_list"
+        android:layout_width="170sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/profile_card"
+        android:drawableLeft="@drawable/ic_low_star"
+        android:fontFamily="@font/montserrat"
+        android:text="Short List"
+        android:textAllCaps="false"
+        android:textColor="@color/textprime"
+        android:textSize="14sp"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/match_btn_send_intrest"
+        android:layout_width="170sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/profile_card"
+        android:drawableLeft="@drawable/ic_low_heart"
+        android:fontFamily="@font/montserrat"
+        android:text="Send Interest"
+        android:textAllCaps="false"
+        android:textColor="@color/textprime"
+        android:textSize="14sp"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/match_btn_short_list" />
+
+    <Button
+        android:id="@+id/match_btn_chat"
+        android:layout_width="170sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="30sp"
+        android:background="@drawable/profile_card"
+        android:drawableLeft="@drawable/ic_low_chat"
+        android:fontFamily="@font/montserrat"
+        android:text="Chat"
+        android:textAllCaps="false"
+        android:textColor="@color/textprime"
+        android:textSize="14sp"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/match_btn_send_intrest"
+        app:layout_constraintVertical_bias="0.059" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

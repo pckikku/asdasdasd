@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cnb_unselectedColor="@color/textprime">
+    <item
+        android:id="@+id/bottom_home"
+        android:icon="@drawable/ic_home"
+        android:title="Home"
+        app:cnb_iconColor="@color/bgcolor" />
+    <item
+        android:id="@+id/bottom_matches"
+        android:icon="@drawable/ic_matches"
+        android:title="Matches"
+        app:cnb_iconColor="@color/bgcolor" />
+    <item
+        android:id="@+id/bottom_inbox"
+        android:icon="@drawable/ic_inbox"
+        android:title="Inbox"
+        app:cnb_iconColor="@color/bgcolor" />
+    <item
+        android:id="@+id/bottom_notification"
+        android:icon="@drawable/ic_notification"
+        android:title="Notifications"
+        app:cnb_iconColor="@color/bgcolor" />
+    <item
+        android:id="@+id/bottom_search"
+        android:icon="@drawable/ic_search"
+        android:title="Search"
+        app:cnb_iconColor="@color/bgcolor" />
+</menu>

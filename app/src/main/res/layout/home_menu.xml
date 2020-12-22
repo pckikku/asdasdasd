@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="6sp">
+
+        <ImageView
+
+            android:id="@+id/homelogid"
+            android:layout_width="150sp"
+            android:layout_height="100sp"
+            android:src="@drawable/kmlogo" />
+
+        <ImageView
+            android:id="@+id/menu_image"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/menu_bar"
+
+            />
+
+        <ToggleButton
+            android:id="@+id/toggleButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/menu_image"
+            android:layout_alignParentEnd="true"
+            android:textOn=""
+            android:textOff=""
+            android:background="@drawable/drawadle_selctor"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

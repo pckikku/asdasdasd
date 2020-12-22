@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgcolor"
+    tools:context=".Activity.LoginActivity">
+
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="350sp"
+        android:background="@drawable/view1"
+        app:layout_constraintBottom_toTopOf="@+id/view2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="327dp"
+        android:layout_height="181dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view1"
+        app:layout_constraintEnd_toEndOf="@+id/view1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view1"
+        app:layout_constraintVertical_bias="0.686"
+        app:srcCompat="@drawable/white_km_logo" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40sp"
+        android:layout_marginRight="40sp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/view2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view1"
+        app:layout_constraintVertical_bias="0.063">
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_user" />
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/username_card"
+            style="@style/Widget.Neumorph.CardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:neumorph_shadowElevation="4sp"
+            app:neumorph_shapeType="pressed">
+
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:layout_marginStart="15sp"
+                android:layout_marginEnd="15sp"
+                android:background="@null"
+                android:fontFamily="@font/montserrat_medium"
+                android:hint="Username"
+                android:inputType="text"
+                android:textColor="@color/textprime"
+                android:textColorHint="@color/textprime_light"
+                android:textCursorDrawable="@null"
+                android:textSize="22sp" />
+        </soup.neumorphism.NeumorphCardView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40sp"
+        android:layout_marginRight="40sp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/view2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout11"
+        app:layout_constraintVertical_bias="0.063">
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_lock" />
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/password_card"
+            style="@style/Widget.Neumorph.CardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:neumorph_shadowElevation="4sp"
+            app:neumorph_shapeType="pressed">
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:layout_marginStart="15sp"
+                android:layout_marginEnd="15sp"
+                android:background="@null"
+                android:fontFamily="@font/montserrat_medium"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:textColor="@color/textprime"
+                android:textColorHint="@color/textprime_light"
+                android:textCursorDrawable="@null"
+                android:textSize="22sp" />
+        </soup.neumorphism.NeumorphCardView>
+    </LinearLayout>
+
+    <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+        android:id="@+id/logbutton_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/view2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout12"
+        app:layout_constraintVertical_bias="0.06"
+        app:neomorph_corner_radius="20sp"
+        app:neomorph_elevation="4sp"
+        app:neomorph_highlight_color="@color/white"
+        app:neomorph_shadow_color="@color/neomorph_shadow_color"
+        app:neomorph_shadow_type="outer"
+        app:neomorph_view_type="rectangular">
+
+        <Button
+            android:id="@+id/logbutton"
+            android:layout_width="170sp"
+            android:layout_height="40sp"
+            android:background="@drawable/logbutton"
+            android:fontFamily="@font/montserrat_medium"
+            android:padding="1sp"
+            android:text="Log in"
+            android:textColor="@color/textprime"
+            android:textSize="16sp"
+            app:backgroundTint="@null" />
+    </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+
+
+    <TextView
+        android:id="@+id/forgotpass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30sp"
+        android:fontFamily="@font/montserrat_light"
+        android:text="Forgot password?"
+        android:textColor="@color/textprime"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/view2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logbutton_card"
+        app:layout_constraintVertical_bias="0.037" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/view2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/forgotpass"
+        app:layout_constraintVertical_bias="0.355">
+
+        <TextView
+            android:id="@+id/creatacc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25sp"
+            android:layout_marginBottom="25sp"
+            android:fontFamily="@font/montserrat_light"
+            android:text="Dont Have Account?"
+            android:textColor="@color/textprime"
+            android:textSize="14sp" />
+
+        <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+            android:id="@+id/button_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
+            app:neomorph_corner_radius="20sp"
+            app:neomorph_elevation="4sp"
+            app:neomorph_highlight_color="@color/white"
+            app:neomorph_shadow_color="@color/neomorph_shadow_color"
+            app:neomorph_shadow_type="outer"
+            app:neomorph_view_type="rectangular">
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="35sp"
+                android:background="@drawable/logbutton"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="Sign Up"
+                android:textAlignment="center"
+                android:textColor="@color/textprime"
+                android:textSize="14sp"
+                app:backgroundTint="@null" />
+        </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="wrap_content"
+        android:layout_height="40sp"
+        android:background="@drawable/view2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:text="www.keralamarry.com"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
